@@ -1,1 +1,1 @@
-variable "PROJECT_ID" { default = "" }
+variable "project_id" { default = "" }
