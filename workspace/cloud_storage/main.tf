@@ -1,9 +1,13 @@
+locals {
+  project_id = "abount-me"
+}
+
 module "gcs_buckets" {
   source     = "terraform-google-modules/cloud-storage/google"
   version    = "~> 2.2"
-  project_id = var.project_id
+  project_id = local.project_id
 
-  names         = ["django-test"]
+  names         = ["${local.project_id}-django-test"]
   prefix        = ""
   storage_class = "STANDARD"
   location      = "asia-northeast1"
