@@ -3,10 +3,11 @@ module "gcs_buckets" {
   version    = "~> 2.2"
   project_id = var.project_id
 
-  names    = ["django-test"]
-  prefix   = ""
-  location = "asia-northeast1"
-  versioning = {}
+  names         = ["django-test"]
+  prefix        = ""
+  storage_class = "STANDARD"
+  location      = "asia-northeast1"
+  versioning    = {}
 
   # Grant roles/storage.objectAdmin role to admins and bucket_admins.
   set_admin_roles = false
